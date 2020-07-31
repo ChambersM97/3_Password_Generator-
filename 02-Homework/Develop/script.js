@@ -34,6 +34,8 @@ var useSpecial = prompt("Would you like to use special characters in your passwo
 // if (useLowerCase === true)
 // if (useNumbers === true)
 // if (useSpecial === true)
+
+// double lines below are supposed to be completely vertical
 // if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true ) {
 //    generatePassword();
 // }
