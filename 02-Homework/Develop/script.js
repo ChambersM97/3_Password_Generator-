@@ -1,6 +1,12 @@
+var wantPass = confirm("Would you like to generate a new password?");
+if (wantPass === true) {
+  alert("Press the red button to generate a poassword.");
+}
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var newPassword =
+var newPassword = writePassword;
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
