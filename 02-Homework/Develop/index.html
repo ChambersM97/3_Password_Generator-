@@ -67,9 +67,14 @@
         //Exact requirements for password length
         //Reminder: || means or in a conditional statement
         while (characterLength < 10 || characterLength > 100) {
-          var characterLength = parseInt(prompt("Try again. Length must be between "))
+          var characterLength = parseInt(prompt("Try again. Length must be between 10-100"));
         }
 
+        //Let user decide which variables he wants to use in his password
+        var selectUpperCase = confirm("Would you like to use upper case letters in your password?");
+        var selectLowerCase = confirm("Would you like to use lower case letters in your password?");
+        var selectNumber = confirm("Would you like to use numbers in your password?");
+        var selectSymbol = confirm("Would you like to use symbol characters in your password?");
 
         
         if (wantPassword === true) {
