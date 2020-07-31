@@ -1,6 +1,6 @@
 var wantPass = confirm("Would you like to generate a new password?");
 if (wantPass === true) {
-  alert("Press the red button to generate a poassword.");
+  alert("Press the red button to generate a password.");
 }
 
 // Special characters for the function created
