@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var wantPass = confirm("Would you like to generate a new password?");
 if (wantPass === true) {
   alert("Press the red button to generate a poassword.");
@@ -6,6 +7,10 @@ if (wantPass === true) {
 // Special characters for the function created
 var generateButton = document.getElementById('generateBtn');
 generateButton.addEventListener('click', writePassword);
+=======
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+>>>>>>> 79f10f107894077147e011f1834ab1ccb0186eb1
 
 // Write password to the #password input
 function writePassword() {

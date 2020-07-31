@@ -130,7 +130,6 @@ button[disabled] {
   }
 }
 
-/* media query is insane! */
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
