@@ -34,8 +34,9 @@
                 aria-label="Generated Password"
               ></textarea>
             </div>
+            
             <div class="card-footer">
-              <button id="generate" class="btn">Generate Password</button>
+              <button onclick="copyPassword()" id="generate" class="btn">Generate Password</button>
             </div>
           </div>
         </div>
@@ -53,6 +54,10 @@
         var specialCharacter = "!#$%&'()*+,-./:;?@][^_`{|}~'<=>";
         var userPassword = "";
         var passwordGroup = "";
+
+        if (wantPassword === true) {
+          alert("Press the big red generate password button to begin!");
+        }
 
         //Request user to enter the legnth of the password
         //parseInt is used bc when the number is requested it is a string that
@@ -76,10 +81,15 @@
         var selectNumber = confirm("Would you like to use numbers in your password?");
         var selectSymbol = confirm("Would you like to use symbol characters in your password?");
 
-        
-        if (wantPassword === true) {
-          alert("Press the big red generate password button to begin!");
-        }
+        //call for button 
+        generatePassword();
+
+        alert("And your new password is..." + userPassword);
+
+        document.getElementId("password").innerHTML = userPassword;
+
+        // Generate password
+
       </script>
 
 
