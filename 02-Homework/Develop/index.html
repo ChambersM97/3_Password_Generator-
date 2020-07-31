@@ -61,12 +61,16 @@
 
         //Require number
         while (isNaN(characterLength)) {
-          var characterLength = parseInt(prompt("This is not a number. Please enter a number between 8-128"));
+          var characterLength = parseInt(prompt("This is not a number. Please enter a number between 10-100"));
         }
 
         //Exact requirements for password length
         //Reminder: || means or in a conditional statement
-        while (characterLength < 8 || characterLength > 128);
+        while (characterLength < 10 || characterLength > 100) {
+          var characterLength = parseInt(prompt("Try again. Length must be between "))
+        }
+
+
         
         if (wantPassword === true) {
           alert("Press the big red generate password button to begin!");
