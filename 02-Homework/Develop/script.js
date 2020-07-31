@@ -19,11 +19,22 @@ function writePassword() {
   passwordText.value = password;
 
 }
+var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
+var numbers = ;
+var specialCharacters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 
 var useUpperCase = prompt("Would you like to use upper case letters in your password?");
 var useLowerCase = prompt("Would you like to use lower case letters in your password?");
 var useNumbers = prompt("Would you like to use numbers in your password?");
 var useSpecial = prompt("Would you like to use special characters in your password?");
 
-if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true)
+// marked out code below
+// if (useUpperCase === true)
+// if (useLowerCase === true)
+// if (useNumbers === true)
+// if (useSpecial === true)
+// if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true ) {
+//    generatePassword();
+// }
 
