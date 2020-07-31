@@ -53,6 +53,16 @@
         var specialCharacter = "!#$%&'()*+,-./:;?@][^_`{|}~'<=>";
         var userPassword = "";
         var passwordGroup = "";
+
+        //Request user to enter the legnth of the password
+        //parseInt is used bc when the number is requested it is a string that
+        //turns into a number or value
+        var characterLength = parseInt(prompt("Enter length or password",""));
+
+        //Require number
+        while (isNaN(characterLength)) {
+          var characterLength = parseInt(prompt("This is not a number. Please enter a number between 8-128"));
+        }
         
         if (wantPassword === true) {
           alert("Press the big red generate password button to begin!");
