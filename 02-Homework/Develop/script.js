@@ -25,3 +25,5 @@ var useLowerCase = prompt("Would you like to use lower case letters in your pass
 var useNumbers = prompt("Would you like to use numbers in your password?");
 var useSpecial = prompt("Would you like to use special characters in your password?");
 
+if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true)
+
