@@ -63,6 +63,10 @@
         while (isNaN(characterLength)) {
           var characterLength = parseInt(prompt("This is not a number. Please enter a number between 8-128"));
         }
+
+        //Exact requirements for password length
+        //Reminder: || means or in a conditional statement
+        while (characterLength < 8 || characterLength > 128);
         
         if (wantPassword === true) {
           alert("Press the big red generate password button to begin!");
