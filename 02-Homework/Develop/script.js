@@ -33,14 +33,31 @@ function generatePassword() {
   var useNumbers = confirm("Would you like to use numbers in your password?");
   var useSpecial = confirm("Would you like to use special characters in your password?");
 
-  if (useUpperCase === true ^ useLowerCase === true ^ useNumbers === true ^ useSpecial === true) {
-    alert("boo");
-  } else {
-    alert("You must choose at least one type of character to make a password. Try again!");
+  if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial === true) {
+
+    } else if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial !== true) {
+      
+    } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
+
+    } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
+      
+    } else {
+      alert("You must choose at least one type of character to make a password. Try again!");
+      generatePassword();
+    }
+    
   }
 
-}
 
-//test
+//var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+//if (characterLength > 7 && characterLength < 129 ) {
+
+//} else {
+  //alert("You must choose between 8-128 characters. Try again!");
+  //generatePassword();
+//}
+
+
+//Math.floor(math.random());
 
 
