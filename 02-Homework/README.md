@@ -40,19 +40,19 @@ THEN a password is generated that matches the selected criteria
 
 
 =======
-GIVEN I need a new, secure password
+GIVEN I need a new, secure password 
 
 WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
+THEN I am presented with a series of prompts for password criteria DONE
 
 WHEN prompted for password criteria
-THEN I select which criteria to include in the password
+THEN I select which criteria to include in the password DONE 
 
 WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
+THEN I choose a length of at least 8 characters and no more than 128 characters DONE
 
 WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
+THEN I choose lowercase, uppercase, numeric, and/or special characters DONE
 
 WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected

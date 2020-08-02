@@ -8,12 +8,11 @@ var generateBtn = document.querySelector("#generate");
 // is interacted with.
 generateBtn.addEventListener("click", writePassword);
 
-
-
 // THIS IS WHEN THE BUTTON IS CLICKED.
 
 //allows satrts making password
 // Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -21,6 +20,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 
 function generatePassword() {
   var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -34,30 +34,85 @@ function generatePassword() {
   var useSpecial = confirm("Would you like to use special characters in your password?");
 
   if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial === true) {
-
-    } else if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial !== true) {
-      
-    } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+        
+      } else {
+        alert("You must choose between 8-128 characters. Try again!");
+      }
 
     } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
-      
-    } else {
-      alert("You must choose at least one type of character to make a password. Try again!");
-      generatePassword();
-    }
-    
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+          passwordText.value
+      } else {
+        alert("You must choose between 8-128 characters. Try again!");
+      }
+
+    } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+      } else {
+        alert("You must choose between 8-128 characters. Try again!");
+      }
+
+    } else if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial !== true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+      } else {
+        alert("You must choose between 8-128 characters. Try again!");
+      }
+
+    } else if (useUpperCase !== true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+      } else {
+        alert("You must choose between 8-128 characters. Try again!");
+      }
+
+    } else if (useUpperCase !== true && useLowerCase === true && useNumbers === true && useSpecial !== true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+        } else {
+          alert("You must choose between 8-128 characters. Try again!");
+        }
+
+    } else if (useUpperCase !== true && useLowerCase === true && useNumbers === true && useSpecial === true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+        } else {
+          alert("You must choose between 8-128 characters. Try again!");
+        }
+
+    } else if (useUpperCase !== true && useLowerCase !== true && useNumbers === true && useSpecial !== true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+        } else {
+          alert("You must choose between 8-128 characters. Try again!");
+        }
+
+    } else if (useUpperCase !== true && useLowerCase !== true && useNumbers === true && useSpecial === true) {
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+        if (characterLength > 8 && characterLength < 129) {
+
+        } else {
+          alert("You must choose between 8-128 characters. Try again!");
+        }
+
+    } else if (useUpperCase !== true && useLowerCase !== true && useNumbers !== true && useSpecial === true){
+        var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+    }   if (characterLength > 8 && characterLength < 129) {
+
+        } else {
+         alert("You must choose between 8-128 characters. Try again!");
+        }
+
   }
-
-
-//var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
-//if (characterLength > 7 && characterLength < 129 ) {
-
-//} else {
-  //alert("You must choose between 8-128 characters. Try again!");
-  //generatePassword();
-//}
-
-
-//Math.floor(math.random());
 
 
