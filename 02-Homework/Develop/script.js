@@ -10,7 +10,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-// THIS IS WHEN THE BUTTON IS CLICKED
+// THIS IS WHEN THE BUTTON IS CLICKED.
 
 //allows satrts making password
 // Write password to the #password input
