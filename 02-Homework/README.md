@@ -28,9 +28,9 @@ THEN I choose a length of at least 8 characters and no more than 128 characters
 
 // Added vars for password criteria
 WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
+<!-- THEN I choose lowercase, uppercase, numeric, and/or special characters -->
 
-// Placed notes in js 
+<!-- // Placed notes in js  -->
 WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected
 
@@ -78,3 +78,9 @@ You are required to submit the following for review:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
+
+generateBtn -
+#generate -
+#password -
