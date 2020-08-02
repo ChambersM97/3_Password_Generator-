@@ -12,12 +12,12 @@
 //}
 
 
-function generate () {
-    for (i = 0; i < 10; i++) {
-      randomLetter = arr[Math.floor(arr.length * Math.random())];
-    console.log(randomLetter);
-    }
-  }
+//function generate () {
+    //for (i = 0; i < 10; i++) {
+      //randomLetter = arr[Math.floor(arr.length * Math.random())];
+    //console.log(randomLetter);
+    //}
+  //}
 
 
 ////GREETING ABOVE
