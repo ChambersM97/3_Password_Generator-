@@ -1,10 +1,18 @@
 // Assignment Code
+// Looks for id of generate and selects it
 var generateBtn = document.querySelector("#generate");
 
 
 // Add event listener to generate button
+// once selected, this essentially tags object with an alarm clock of sorts that does the command in quotes if said object
+// is interacted with.
 generateBtn.addEventListener("click", writePassword);
 
+
+
+// THIS IS WHEN THE BUTTON IS CLICKED
+
+//allows satrts making password
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -33,6 +41,6 @@ function generatePassword() {
 
 }
 
-
+//test
 
 
