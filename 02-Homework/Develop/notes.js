@@ -1,15 +1,23 @@
 //wantPass and wantPassAgain are just used when website greets user
 //Missing a way to loop else statement to start it over.
-var wantPass = confirm("Would you like to generate a new password?");
-if (wantPass === true) {
-  alert("Press the red button to generate a password.");
-}
-if (wantPass !== true) {
-  var wantPassAgain = confirm("Are you sure you don't want a new password?");
-}
-if (wantPassAgain === true) {
-  alert("Well I guess I'll see you later.");
-}
+//var wantPass = confirm("Would you like to generate a new password?");
+//if (wantPass === true) {
+//  alert("Press the red button to generate a password.");
+//}
+//if (wantPass !== true) {
+  //var wantPassAgain = confirm("Are you sure you don't want a new password?");
+//}
+//if (wantPassAgain === true) {
+  //alert("Well I guess I'll see you later.");
+//}
+
+
+function generate () {
+    for (i = 0; i < 10; i++) {
+      randomLetter = arr[Math.floor(arr.length * Math.random())];
+    console.log(randomLetter);
+    }
+  }
 
 
 ////GREETING ABOVE
