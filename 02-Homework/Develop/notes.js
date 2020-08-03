@@ -17,7 +17,7 @@
       //randomLetter = arr[Math.floor(arr.length * Math.random())];
     //console.log(randomLetter);
     //}
-  //}
+  
 
 
 ////GREETING ABOVE
