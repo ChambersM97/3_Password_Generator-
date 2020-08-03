@@ -34,17 +34,20 @@ function generatePassword() {
   var useLowerCase = confirm("Would you like to use lower case letters in your password?");
   var useNumbers = confirm("Would you like to use numbers in your password?");
   var useSpecial = confirm("Would you like to use special characters in your password?");
-  var characterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+  var askCharacterLength = prompt("Between 8-128, Choose how many characters you want in your password");
+  var characterLength = askCharacterLength;
+
+  //for (var i = 0; i < characterLength; i++)
 
   if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial === true) {
         if (characterLength > 7 && characterLength < 129) {
-
+        
       } else {
         alert("You must choose between 8-128 characters. Try again!");
       }
 
   } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
-        if (characterLength > 7 && characterLength < 129) {
+        if (askCharacterLength > 7 && askCharacterLength < 129) {
           var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
           alert("hi");
       } else {
