@@ -1,11 +1,23 @@
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var x = upperCase.concat(lowerCase, numbers);
-console.log(x.join(""));
-console.log(x.length);
+//console.log(upperCase.join());
+//var x = upperCase.concat(lowerCase, numbers);
+//console.log(x.join(""));
+
+//var z = Math.floor(Math.random(upperCase.length));
+//console.log(Math.floor(Math.random(upperCase.length * 5)));
+//var f = console.log(Math.floor((Math.random(upperCase.length)) * 10 + 1));
+
+
+
+
+//onsole.log(x.join(""));
+//console.log(x.length);
 
 //console.log(upperCase.join());
+
+// EVERYTHING ABOVE IS FOR TESTING AND NOT PART OF CODE
 
 // Assignment Code
 // Looks for id of generate and selects it
@@ -34,17 +46,16 @@ function writePassword() {
     var specialCharacters = ["!","@","#","$","%","^","&","*","(",")"]; 
 
     
-      var useUpperCase = confirm("Would you like to use upper case letters in your password?");
-      var useLowerCase = confirm("Would you like to use lower case letters in your password?");
-      var useNumbers = confirm("Would you like to use numbers in your password?");
-      var useSpecial = confirm("Would you like to use special characters in your password?");
-    //var characterLength = askCharacterLength;
+    var useUpperCase = confirm("Would you like to use upper case letters in your password?");
+    var useLowerCase = confirm("Would you like to use lower case letters in your password?");
+    var useNumbers = confirm("Would you like to use numbers in your password?");
+    var useSpecial = confirm("Would you like to use special characters in your password?");
+      //var characterLength = askCharacterLength;
   
-    for (var i = 0; i < characterLength; i++) {
+  
+  
+    //for (var i = 0; i < askCharacterLength; i++) {
 
-      //var word
-
-    }
     if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true) {
       var askCharacterLength = prompt("Between 8-128, Choose how many characters you want in your password");
 
@@ -52,6 +63,8 @@ function writePassword() {
       alert("You must pick at least one category! Try again.");
       generatePassword();
     }
+
+
 
     if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial === true) {
         if (askCharacterLength > 7 && askCharacterLength < 129) {
@@ -61,13 +74,17 @@ function writePassword() {
       }
   
   } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
+      for (var i = 0; i < 1; i++) {
         if (askCharacterLength > 7 && askCharacterLength < 129) {
+          var food = (upperCase[(Math.floor(Math.random() * upperCase.length))]);
+          console.log(food);
 
-      } else {
+       } else {
         alert("You must choose between 8-128 characters. Try again!");
       }
+
   
-  } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
+  } } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
         if (askCharacterLength > 7 && characterLength < 129) {
   
       } else {
@@ -123,7 +140,7 @@ function writePassword() {
       }
   
     }
-  
 }
+  
 
 
