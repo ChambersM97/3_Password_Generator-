@@ -73,17 +73,19 @@ function writePassword() {
       }
   
   } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
-      for (var i = 0; i < 1; i++) {
-        if (askCharacterLength > 7 && askCharacterLength < 129) {
-          var food = (upperCase[(Math.floor(Math.random() * upperCase.length))]);
-          console.log(food + i);
+      if (askCharacterLength > 7 && askCharacterLength < 129) {
+        for (i = 0; i < askCharacterLength; i++ ) {
+          if food = ((upperCase[(Math.floor(Math.random() * upperCase.length))]) + i);
+          //var food2 = (food + indexOf(upperCase[i]));
+          console.log(food);
+          
 
-       } else {
+       } } else {
         alert("You must choose between 8-128 characters. Try again!");
       }
 
   
-  } } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
+  } else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
         if (askCharacterLength > 7 && characterLength < 129) {
   
       } else {
