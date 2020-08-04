@@ -1,6 +1,6 @@
-var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+//var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+//var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+//var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //console.log(upperCase.join());
 //var x = upperCase.concat(lowerCase, numbers);
 //console.log(x.join(""));
@@ -10,9 +10,7 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //var f = console.log(Math.floor((Math.random(upperCase.length)) * 10 + 1));
 
 
-
-
-//onsole.log(x.join(""));
+//console.log(x.join(""));
 //console.log(x.length);
 
 //console.log(upperCase.join());
@@ -31,6 +29,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // THIS IS WHEN THE BUTTON IS CLICKED.
 
+
 // Write password to the #password input
 
 function writePassword() {
@@ -39,7 +38,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-  function generatePassword() {
+  function generatePassword() { 
     var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -77,7 +76,7 @@ function writePassword() {
       for (var i = 0; i < 1; i++) {
         if (askCharacterLength > 7 && askCharacterLength < 129) {
           var food = (upperCase[(Math.floor(Math.random() * upperCase.length))]);
-          console.log(food);
+          console.log(food + i);
 
        } else {
         alert("You must choose between 8-128 characters. Try again!");
@@ -137,6 +136,7 @@ function writePassword() {
   } else if (useUpperCase !== true && useLowerCase !== true && useNumbers !== true && useSpecial === true){;
     }   if (askCharacterLength > 7 && askCharacterLength < 129) {
   
+      } else {
       }
   
     }
