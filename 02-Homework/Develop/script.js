@@ -1,23 +1,3 @@
-//var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-//var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-//var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-//console.log(upperCase.join());
-//var x = upperCase.concat(lowerCase, numbers);
-//console.log(x.join(""));
-
-//var z = Math.floor(Math.random(upperCase.length));
-//console.log(Math.floor(Math.random(upperCase.length * 5)));
-//var f = console.log(Math.floor((Math.random(upperCase.length)) * 10 + 1));
-
-
-//console.log(x.join(""));
-//console.log(x.length);
-
-//console.log(upperCase.join());
-
-// EVERYTHING ABOVE IS FOR TESTING AND NOT PART OF CODE
-
-// Assignment Code
 // Looks for id of generate and selects it
 var generateBtn = document.querySelector("#generate");
 
@@ -40,8 +20,6 @@ function writePassword() {
 }
 
 
-
-
 function generatePassword() { 
   var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -53,6 +31,7 @@ function generatePassword() {
   var useLowerCase = confirm("Would you like to use lower case letters in your password?");
   var useNumbers = confirm("Would you like to use numbers in your password?");
   var useSpecial = confirm("Would you like to use special characters in your password?");
+  var askCharacterLength = 0;
     //var characterLength = askCharacterLength;
 
 
@@ -81,9 +60,10 @@ function generatePassword() {
 } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
     if (askCharacterLength > 7 && askCharacterLength < 129) {
       for (i = 0; i < askCharacterLength; i++) {
-        var food = ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
-        
-        //var food2 = (food + indexOf(upperCase[i]));
+        function pushUpperCase() {
+          return String.upperCase(Math.floor(Math.random() * askCharacterLength ) + 26);
+        }
+        //var food = ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
         
         
 
@@ -111,7 +91,8 @@ function generatePassword() {
 
 } else if (useUpperCase !== true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
       if (askCharacterLength > 7 && askCharacterLength < 129) {
-
+        
+        }
     } else {
       alert("You must choose between 8-128 characters. Try again!");
       
