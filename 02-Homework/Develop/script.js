@@ -30,7 +30,7 @@ var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 var useUpperCase = confirm("Would you like to use upper case letters in your password?");
 var useLowerCase = confirm("Would you like to use lower case letters in your password?");
 var useNumbers = confirm("Would you like to use numbers in your password?");
-var useSpecial = confirm("Would you like to use special characters in your password?");
+var useSymbols = confirm("Would you like to use special characters in your password?");
 var askCharacterLength = 0;
 //var characterLength = askCharacter
 
@@ -38,112 +38,38 @@ var askCharacterLength = 0;
 // one the character length and arrays are decided, the function below
 // randomizes said character length using Math.floor(Math.random())
 function generatePassword() {
-  //var characterLength = askCharacterLength;
 
+  for (var i = 0; i < askCharacterLength; i++) {
+      if (useUpperCase === true) {
 
+      };
+
+      if (useLowerCase === true) {
+
+      };
+
+      if (useNumbers === true) {
+
+      };
+
+      if (useSymbols === true) {
+
+      };
 
   //for (var i = 0; i < askCharacterLength; i++)
   //Document.Write !!!!
-
-  if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true) {
-    var askCharacterLength = prompt("Between 8-128, Choose how many characters you want in your password");
-
-  } else {
-    alert("You must pick at least one category! Try again.");
-
-  }
-
-
-
-  if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial === true) {
-    if (askCharacterLength > 7 && askCharacterLength < 129) {
-
-
-    } else {
-      alert("You must choose between 8-128 characters. Try again!");
-
-    }
-
-  } else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
-    if (askCharacterLength > 7 && askCharacterLength < 129) {
-      for (i = 0; i < askCharacterLength; i++) {
-        var food = ((upperCase[(Math.floor(Math.random() * upperCase.length))]));;
-      }
-
-
-
-
-    }
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-
-
-}  else if (useUpperCase === true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
-    if (askCharacterLength > 7 && characterLength < 129) {
-
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-
-} else if (useUpperCase === true && useLowerCase === true && useNumbers === true && useSpecial !== true) {
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
-
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-
-} else if (useUpperCase !== true && useLowerCase === true && useNumbers !== true && useSpecial !== true) {
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
-
-  }
-} else {
-  alert("You must choose between 8-128 characters. Try again!");
-
 }
 
-} else if (useUpperCase !== true && useLowerCase === true && useNumbers === true && useSpecial !== true) {
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
 
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
 
-  }
+// else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
+//   if (askCharacterLength > 7 && askCharacterLength < 129) {
+//     for (i = 0; i < askCharacterLength; i++) {
+//       var food = ((upperCase[(Math.floor(Math.random() * upperCase.length))]));;
 
-} else if (useUpperCase !== true && useLowerCase === true && useNumbers === true && useSpecial === true) {
+// if (askCharacterLength > 7 && askCharacterLength < 129) {
 
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
+// } else {
+//   alert("You must choose between 8-128 characters. Try again!");
 
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-
-} else if (useUpperCase !== true && useLowerCase !== true && useNumbers === true && useSpecial !== true) {
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
-
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-
-} else if (useUpperCase !== true && useLowerCase !== true && useNumbers === true && useSpecial === true) {
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
-
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-
-} else if (useUpperCase !== true && useLowerCase !== true && useNumbers !== true && useSpecial === true) {
-  if (askCharacterLength > 7 && askCharacterLength < 129) {
-
-  } else {
-    alert("You must choose between 8-128 characters. Try again!");
-
-  }
-} 
-}
+// }
