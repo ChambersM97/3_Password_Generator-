@@ -24,42 +24,61 @@ function writePassword() {
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
 // The confirms are used to determ if the generatePassword() function will include that specificed character set
 var useUpperCase = confirm("Would you like to use upper case letters in your password?");
 var useLowerCase = confirm("Would you like to use lower case letters in your password?");
 var useNumbers = confirm("Would you like to use numbers in your password?");
 var useSymbols = confirm("Would you like to use special characters in your password?");
-var askCharacterLength = 0;
+var askCharacterLength = parseInt(prompt("Well... How many characters would you like to have in your password! (must be between 8 and 128)"));
+
 //var characterLength = askCharacter
 
 
 // one the character length and arrays are decided, the function below
 // randomizes said character length using Math.floor(Math.random())
 function generatePassword() {
+  //"0123456789".split("");
+  //var children = hege.concat(stale,kai); 
 
   for (var i = 0; i < askCharacterLength; i++) {
-      if (useUpperCase === true) {
+    var password = " ";
 
+    var numOfChar = []
+      if (useUpperCase === true) {
+        //((upperCase[(Math.floor(Math.random() * upperCase.length))]));
+        password = password + ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
+        
       };
 
       if (useLowerCase === true) {
+        password = password + ((lowerCase[(Math.floor(Math.random() * lowerCase.length))]));
 
       };
 
       if (useNumbers === true) {
-
+      
+        password = password + ((numbers[(Math.floor(Math.random() * numbers.length))]));
       };
 
       if (useSymbols === true) {
+        password = password + ((symbols[(Math.floor(Math.random() * symbols.length))]));
+      }
 
+      console.log(password);
+
+      if (useUpperCase === false && useLowerCase === false && useNumbers === flase && useSymbols === false ){
+        alert("You must choose at least one category. Try again!");
       };
+
+
+      //password = Math.floor(Math.random(//All of the ))
 
   //for (var i = 0; i < askCharacterLength; i++)
   //Document.Write !!!!
 }
-
+}
 
 
 // else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
@@ -71,5 +90,3 @@ function generatePassword() {
 
 // } else {
 //   alert("You must choose between 8-128 characters. Try again!");
-
-// }
