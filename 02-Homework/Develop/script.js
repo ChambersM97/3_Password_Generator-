@@ -36,7 +36,8 @@ function generatePassword() {
 
 
 
-  //for (var i = 0; i < askCharacterLength; i++) {
+  //for (var i = 0; i < askCharacterLength; i++)
+  //Document.Write !!!!
 
   if (useUpperCase === true || useLowerCase === true || useNumbers === true || useSpecial === true) {
     var askCharacterLength = prompt("Between 8-128, Choose how many characters you want in your password");
