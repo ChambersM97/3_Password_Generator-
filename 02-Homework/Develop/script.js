@@ -31,11 +31,15 @@ var lowerUpperNumbersSymbols = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"
 var lowerUpperSymbols = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
 "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
+
 var lowerUpperNumbers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", 
 "V", "W", "X", "Y", "Z","0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-var lowerNumbersSymbols = []
+//remember comma at end
+var lowerNumbersSymbols = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","0", "1",
+"2", "3", "4", "5", "6", "7", "8", "9","0", "1", "2", "3", "4", "5", "6", "7", "8", "9","!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
+//remember comma at end
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
@@ -47,7 +51,7 @@ var upperLowerCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"
 var useLowerCase = confirm("Would you like to use upper case letters in your password?");
 var useUpperCase = confirm("Would you like to use lower case letters in your password?");
 var useNumbers = confirm("Would you like to use numbers in your password?");
-var useSymbols = confirm("Would you like to use special characters in your password?");
+var useSymbols = confirm("Would you like to use symbols in your password?");
 var askCharacterLength = parseInt(prompt("Well... How many characters would you like to have in your password! (must be between 8 and 128)"));
 
 
@@ -74,9 +78,11 @@ function generatePassword() {
 
       endPassword += ((lowerUpperNumbers[(Math.floor(Math.random() * lowerUpperNumbers.length))]));
 
-    } else if (useLowerCase === true && useNumbers === true && useSymbols === true) {
+    } 
+    
+    else if (useLowerCase === true && useNumbers === true && useSymbols === true) {
 
-      endPassword += ((lowerCase[(Math.floor(Math.random() * lowerCase.length))]));
+      endPassword += ((lowerNumbersSymbols[(Math.floor(Math.random() * lowerNumbersSymbols.length))]));
 
     }; //else if (useUpperCase === true) {
 
