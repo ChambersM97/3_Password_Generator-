@@ -45,6 +45,12 @@ var upperNumbersSymbols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"
 var lowerSymbols = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
 var lowerNumbers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+var lowerUpper = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+var upperSymbols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+
+var upperNumbers = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ];
 //remember comma at end
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -58,7 +64,7 @@ var useLowerCase = confirm("Would you like to use lower case letters in your pas
 var useUpperCase = confirm("Would you like to use upper case letters in your password?");
 var useNumbers = confirm("Would you like to use numbers in your password?");
 var useSymbols = confirm("Would you like to use symbols in your password?");
-var askCharacterLength = parseInt(prompt("Well... How many characters would you like to have in your password! (must be between 8 and 128)"));
+
 
 
 
@@ -68,6 +74,14 @@ var askCharacterLength = parseInt(prompt("Well... How many characters would you 
 function generatePassword() {
  
   var endPassword = " ";
+
+  var askCharacterLength = parseInt(prompt("Well... How many characters would you like to have in your password! (must be between 8 and 128)"));
+  if (askCharacterLength < 8 || askCharacterLength > 128){
+    confirm("You must choose a different amount of characters. Try again!")
+    var endPassword = "Try again!"
+    return endPassword;
+  }
+  
 
   for (var i = 0; i < askCharacterLength; i++) {
 
@@ -113,6 +127,25 @@ function generatePassword() {
       endPassword += ((lowerNumbers[(Math.floor(Math.random() * lowerNumbers.length))]));
 
     }
+
+    else if (useLowerCase === true && useUpperCase === true) {
+      
+      endPassword += ((lowerUpper[(Math.floor(Math.random() * lowerUpper.length))]));
+
+    }
+    //dry below
+    else if (useUpperCase === true && useSymbols === true) {
+
+      endPassword += ((upperSymbols[(Math.floor(Math.random() * upperSymbols.length))]));
+
+    }
+
+    else if (useUpperCase === true && useNumbers === true) {
+
+      endPassword += ((upperNumbers[(Math.floor(Math.random() * upperNumbers.length))]));
+
+    }
+
     
     
     
