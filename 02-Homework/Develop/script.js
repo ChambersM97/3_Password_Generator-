@@ -180,32 +180,6 @@ function generatePassword() {
     }
 
 
-
-    
-    
-    
-    
-    //else if (useUpperCase === true) {
-
-      //endPassword += ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
-    
-
-    //if (useSymbols === true) {
-
-      //endPassword += ((symbols[(Math.floor(Math.random() * symbols.length))]));
-    //};
-
-
-    //if (useNumbers === true ) {
-
-      //endPassword += ((numbers[(Math.floor(Math.random() * numbers.length))]));
-    //};
-
-
-    
-
-  
-
   }
   return endPassword;
 }
