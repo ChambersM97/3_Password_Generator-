@@ -5,6 +5,7 @@ var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 // once selected, this essentially tags object with an alarm clock of sorts that does the command in quotes if said object
 // is interacted with.
+
 generateBtn.addEventListener("click", writePassword);
 
 // THIS IS WHEN THE BUTTON IS CLICKED.
@@ -33,60 +34,42 @@ var useNumbers = confirm("Would you like to use numbers in your password?");
 var useSymbols = confirm("Would you like to use special characters in your password?");
 var askCharacterLength = parseInt(prompt("Well... How many characters would you like to have in your password! (must be between 8 and 128)"));
 
-//var characterLength = askCharacter
 
 
 // one the character length and arrays are decided, the function below
 // randomizes said character length using Math.floor(Math.random())
+
 function generatePassword() {
-  //"0123456789".split("");
-  //var children = hege.concat(stale,kai); 
+ 
+  var endPassword = " ";
 
   for (var i = 0; i < askCharacterLength; i++) {
-    var password = " ";
-
-    var numOfChar = []
-      if (useUpperCase === true) {
-        //((upperCase[(Math.floor(Math.random() * upperCase.length))]));
-        password = password + ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
-        
-      };
-
-      if (useLowerCase === true) {
-        password = password + ((lowerCase[(Math.floor(Math.random() * lowerCase.length))]));
-
-      };
-
-      if (useNumbers === true) {
-      
-        password = password + ((numbers[(Math.floor(Math.random() * numbers.length))]));
-      };
-
-      if (useSymbols === true) {
-        password = password + ((symbols[(Math.floor(Math.random() * symbols.length))]));
-      }
-
-      console.log(password);
-
-      if (useUpperCase === false && useLowerCase === false && useNumbers === flase && useSymbols === false ){
-        alert("You must choose at least one category. Try again!");
-      };
 
 
-      //password = Math.floor(Math.random(//All of the ))
+    if (useLowerCase === true) {
 
-  //for (var i = 0; i < askCharacterLength; i++)
-  //Document.Write !!!!
-}
-}
+      endPassword += ((lowerCase[(Math.floor(Math.random() * lowerCase.length))]));
+    };
+
+    if (useUpperCase === true) {
+
+      endPassword += ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
+    };
+
+    if (useSymbols === true) {
+
+      endPassword += ((symbols[(Math.floor(Math.random() * symbols.length))]));
+    };
 
 
-// else if (useUpperCase === true && useLowerCase !== true && useNumbers !== true && useSpecial !== true) {
-//   if (askCharacterLength > 7 && askCharacterLength < 129) {
-//     for (i = 0; i < askCharacterLength; i++) {
-//       var food = ((upperCase[(Math.floor(Math.random() * upperCase.length))]));;
+    if (useNumbers === true ) {
 
-// if (askCharacterLength > 7 && askCharacterLength < 129) {
+      endPassword += ((numbers[(Math.floor(Math.random() * numbers.length))]));
+    };
+    
 
-// } else {
-//   alert("You must choose between 8-128 characters. Try again!");
+    }
+    return endPassword;
+  }
+
+
