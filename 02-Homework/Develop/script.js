@@ -39,17 +39,23 @@ var lowerUpperNumbers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
 var lowerNumbersSymbols = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","0", "1",
 "2", "3", "4", "5", "6", "7", "8", "9","0", "1", "2", "3", "4", "5", "6", "7", "8", "9","!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
+var upperNumbersSymbols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y",
+ "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+
+var lowerSymbols = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+
+var lowerNumbers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //remember comma at end
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
 var upperLowerCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 // The confirms are used to determ if the generatePassword() function will include that specificed character set
-var useLowerCase = confirm("Would you like to use upper case letters in your password?");
-var useUpperCase = confirm("Would you like to use lower case letters in your password?");
+var useLowerCase = confirm("Would you like to use lower case letters in your password?");
+var useUpperCase = confirm("Would you like to use upper case letters in your password?");
 var useNumbers = confirm("Would you like to use numbers in your password?");
 var useSymbols = confirm("Would you like to use symbols in your password?");
 var askCharacterLength = parseInt(prompt("Well... How many characters would you like to have in your password! (must be between 8 and 128)"));
@@ -71,7 +77,9 @@ function generatePassword() {
     }
 
     else if (useLowerCase === true && useUpperCase === true && useSymbols === true) {
+
       endPassword += ((lowerUpperSymbols[(Math.floor(Math.random() * lowerUpperSymbols.length))]));
+
     }
 
     else if (useLowerCase === true && useUpperCase === true && useNumbers === true) {
@@ -80,11 +88,37 @@ function generatePassword() {
 
     } 
     
+    //this one buggy
     else if (useLowerCase === true && useNumbers === true && useSymbols === true) {
 
       endPassword += ((lowerNumbersSymbols[(Math.floor(Math.random() * lowerNumbersSymbols.length))]));
 
-    }; //else if (useUpperCase === true) {
+    }
+    
+    else if (useUpperCase === true && useNumbers === true && useSymbols === true) {
+
+      endPassword += ((upperNumbersSymbols[(Math.floor(Math.random() * upperNumbersSymbols.length))]));
+
+    }
+
+    //buggy??
+    else if (useLowerCase === true && useSymbols === true) { 
+
+      endPassword += ((lowerSymbols[(Math.floor(Math.random() * lowerSymbols.length))]));
+
+    }
+
+    else if (useLowerCase === true && useNumbers === true) {
+
+      endPassword += ((lowerNumbers[(Math.floor(Math.random() * lowerNumbers.length))]));
+
+    }
+    
+    
+    
+    
+    
+    //else if (useUpperCase === true) {
 
       //endPassword += ((upperCase[(Math.floor(Math.random() * upperCase.length))]));
     
