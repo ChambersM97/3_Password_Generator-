@@ -7,4 +7,4 @@ Technologies Used: HTML, CSS, JS
 The application is used to make a password for the user, whose characters are chosen by random. There are filters that let
 a user specify what kind of characters they want in the password: lower case, upper case, symbols, and numbers.
 
-![Password-Generator]()
+![Password-Generator](img/realpasswordgen.gif)
